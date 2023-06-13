@@ -33,18 +33,3 @@ sudo apt-get update && sudo apt-get install sqlite3
 ```
 gunicorn dash_mess:server -b 0.0.0.0:80 -w 4
 ```
-
-
-## Todo
-
-Want to help contribute???
-
-- Code is ugly. Low hanging fruit is just making the code not so ugly. Up to this point, I've just been in "make it work" mode.
-- App is ugly. I am not a designer. This app is prettttttyyyyyy gross. Think you have a better design? Halp. 
-- Click-able related terms and trending terms would be nice. I tried, but failed at this. It'd be cool to see a related term, and be able to just click on it, and this becomes the new searched term, for example.
-- The interactive search is cool, but also does a search in the database per-character. It would be nice if it didn't search per key-press. Not sure I want a search button, I like the streamlined interactivity, but maybe wait 0.2 seconds or something without any new keypresses to perform the search? Something like that might help with speeds. I really do not know the best option here, I just know this isn't idea.
-- Other manipulations or ideas for interactivity? Feel free to show them in a PR.
-
-## Credits
-
-The speed of the application, especially with a database with 10's of millions of records is thanks entirely to [**Daniel Kukiela**](https://github.com/daniel-kukiela/) who helped us to convert from regular sqlite to using fts, helping with the queries, new database structure, caching, and more.
